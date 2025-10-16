@@ -35,10 +35,23 @@ describe('App', () => {
     // render App
     render(<App />)
 
-    // test typing into input fields: New Candy, 150g, US
+    // test typing into input field: New Candy
     await userEvent.type(screen.getByPlaceholderText(/Candy name/i), 'Test Candy')
 
     // assert Add Candy button click
     await userEvent.click(screen.getByRole('button', {name: /Add Candy/i}))
   })   
+
+  test('allows user to add a new candy', async () => {
+    // render App
+    render(<App />)
+
+    // test typing into input fields: New Candy, 150g, US
+    await userEvent.type(screen.getByPlaceholderText(/Candy name/i), 'Test Candy')
+    await userEvent.type(screen.getByPlaceholderText(/e.g. 100g/i), '69g')
+    await userEvent.type(screen.getByPlaceholderText(/Country code/i), 'HU')
+
+    // assert Add Candy button click
+    await userEvent.click(screen.getByRole('button', {name: /Add Candy/i}))
+  }) 
 })
