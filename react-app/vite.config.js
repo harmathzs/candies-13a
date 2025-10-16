@@ -9,9 +9,7 @@ export default defineConfig({
     globals: true, // for global var, expect ...
 
     coverage: {
-      provider: 'istanbul',
-      reporter: ['text', 'html', 'lcov'],
-      reportsDirectory: './coverage',
+      reporter: ['text', 'html'],
     }
   }
 })
