@@ -14,7 +14,7 @@ describe('local dummy test', () => {
 
 describe('Candy', () => {
   test('renders candy details', () => {
-    const candy = <Candy name="TestCandy" mass="100g" origin="HU" />
+    const candy = <Candy key={'TestCandy'} name="TestCandy" mass="100g" origin="HU" />
     // render candy
     render(candy)
     // assert name, mass, origin
@@ -31,7 +31,7 @@ describe('App', () => {
     expect(screen.getByRole('heading', {name: /Candies/i})).toBeInTheDocument()
   })
 
-  test('allows user to add a new candy', async () => {
+  test('allows user to add a new candy 1', async () => {
     // render App
     render(<App />)
 
@@ -42,7 +42,7 @@ describe('App', () => {
     await userEvent.click(screen.getByRole('button', {name: /Add Candy/i}))
   })   
 
-  test('allows user to add a new candy', async () => {
+  test('allows user to add a new candy 2', async () => {
     // render App
     render(<App />)
 
@@ -54,4 +54,12 @@ describe('App', () => {
     // assert Add Candy button click
     await userEvent.click(screen.getByRole('button', {name: /Add Candy/i}))
   }) 
+
+  test('allows user to delete candies', async () => {
+    // render App
+    render(<App />)
+
+    // assert Add Candy button click
+    await userEvent.click(screen.getByRole('button', {name: /Delete All Candies/i}))
+  })  
 })
