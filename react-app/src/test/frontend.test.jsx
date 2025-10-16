@@ -15,10 +15,10 @@ describe('local dummy test', () => {
 describe('Candy', () => {
   test('renders candy details', () => {
     const candy = <Candy name="TestCandy" mass="100g" origin="HU" />
-    // TODO - render candy
+    // render candy
     render(candy)
-    // TODO - assert name, mass, origin
-
+    // assert name, mass, origin
+    expect(screen.getByText(/TestCandy/i)).toBeInTheDocument()
   })
 })
 
