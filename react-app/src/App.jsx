@@ -59,7 +59,7 @@ export default class App extends React.Component {
     const {candies, newCandy} = this.state
     return (
       <>
-        <h1>Candies</h1>
+        <h1 className="heading" name="heading">Candies</h1>
         <div className="container">
           <section className="data-section">
             {candies.length === 0 ? (

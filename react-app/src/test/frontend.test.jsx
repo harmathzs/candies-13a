@@ -24,10 +24,11 @@ describe('Candy', () => {
 
 describe('App', () => {
   test('renders App heading', () => {
-    // TODO - render App
+    // render App
     render(<App />)
-    // TODO - test heading
-
+    // test heading
+    // expect(screen.getAllByText(/Candies/i))
+    expect(screen.getByRole('heading', {name: /Candies/i})).toBeInTheDocument()
   })
 
   test('allows user to add a new candy', async () => {
