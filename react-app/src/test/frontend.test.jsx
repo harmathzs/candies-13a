@@ -1,4 +1,4 @@
-/* frontend.test.jsx */
+/* frontend.test.jsx */ 
 import { describe, test, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom' // adds custom matchers like toBeInTheDocument

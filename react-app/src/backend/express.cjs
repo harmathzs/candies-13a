@@ -29,7 +29,7 @@ app.delete('/candies', (req, res)=>{
 })
 
 // Export the app for testing
-module.exports = app
+module.exports = app // = export default app
 
 // Only start server if this is the main module (not when testing)
 if (require.main === module) {
