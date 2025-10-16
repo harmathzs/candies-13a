@@ -16,7 +16,7 @@ describe('Candy', () => {
   test('renders candy details', () => {
     const candy = <Candy name="TestCandy" mass="100g" origin="HU" />
     // TODO - render candy
-
+    render(candy)
     // TODO - assert name, mass, origin
 
   })
@@ -25,7 +25,7 @@ describe('Candy', () => {
 describe('App', () => {
   test('renders App heading', () => {
     // TODO - render App
-
+    render(<App />)
     // TODO - test heading
 
   })
@@ -37,5 +37,5 @@ describe('App', () => {
 
     // TODO - assert Add Candy button click
 
-  })  
+  })   
 })
