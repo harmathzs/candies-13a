@@ -32,11 +32,13 @@ describe('App', () => {
   })
 
   test('allows user to add a new candy', async () => {
-    // TODO - render App
+    // render App
+    render(<App />)
 
-    // TODO - test typing into input fields: New Candy, 150g, US
+    // test typing into input fields: New Candy, 150g, US
+    await userEvent.type(screen.getByPlaceholderText(/Candy name/i), 'Test Candy')
 
-    // TODO - assert Add Candy button click
-
+    // assert Add Candy button click
+    await userEvent.click(screen.getByRole('button', {name: /Add Candy/i}))
   })   
 })
